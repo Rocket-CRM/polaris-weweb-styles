@@ -1,4 +1,5 @@
 export { default as PolarisButton } from './PolarisButton.vue'
+export { default as PolarisButtonGroup } from './PolarisButtonGroup.vue'
 export { default as PolarisText } from './PolarisText.vue'
 export { default as PolarisInline } from './PolarisInline.vue'
 export { default as PolarisBlockStack } from './PolarisBlockStack.vue'
