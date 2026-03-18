@@ -1,2 +1,14 @@
-// Polaris Vue components - placeholder
-export default {}
+export { default as PolarisButton } from './PolarisButton.vue'
+export { default as PolarisText } from './PolarisText.vue'
+export { default as PolarisInline } from './PolarisInline.vue'
+export { default as PolarisBlockStack } from './PolarisBlockStack.vue'
+export { default as PolarisBadge } from './PolarisBadge.vue'
+export { default as PolarisBanner } from './PolarisBanner.vue'
+export { default as PolarisCard } from './PolarisCard.vue'
+export { default as PolarisCardHeader } from './PolarisCardHeader.vue'
+export { default as PolarisCardSection } from './PolarisCardSection.vue'
+export { default as PolarisConfigSection } from './PolarisConfigSection.vue'
+export { default as PolarisTextField } from './PolarisTextField.vue'
+export { default as PolarisSelect } from './PolarisSelect.vue'
+export { default as PolarisCheckbox } from './PolarisCheckbox.vue'
+export { default as PolarisEmptyState } from './PolarisEmptyState.vue'
