@@ -1,0 +1,68 @@
+// ============================================
+// CHART CARD MIXINS
+// Polaris-styled chart card containers
+// ============================================
+
+@mixin polaris-chart-card {
+  @include polaris-card;
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin polaris-chart-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--p-space-200);
+  padding: var(--p-space-400) var(--p-space-400) 0;
+}
+
+@mixin polaris-chart-card-title {
+  font-size: var(--p-font-size-325);
+  font-weight: var(--p-font-weight-semibold);
+  color: var(--p-color-text-secondary);
+  margin: 0;
+  line-height: var(--p-font-line-height-400);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+@mixin polaris-chart-card-metric {
+  padding: var(--p-space-100) var(--p-space-400) 0;
+  font-size: var(--p-font-size-700);
+  font-weight: var(--p-font-weight-bold);
+  color: var(--p-color-text);
+  line-height: 1.1;
+}
+
+@mixin polaris-chart-card-body {
+  flex: 1;
+  padding: var(--p-space-300) var(--p-space-400) var(--p-space-400);
+}
+
+@mixin polaris-chart-card-footer {
+  padding: 0 var(--p-space-400) var(--p-space-400);
+  display: flex;
+  gap: var(--p-space-200);
+}
+
+@mixin polaris-score-ring {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin polaris-progress-bar($height: 8px) {
+  width: 100%;
+  height: $height;
+  background: var(--p-color-bg-fill-secondary);
+  border-radius: var(--p-border-radius-full);
+  overflow: hidden;
+}
+
+@mixin polaris-progress-bar-fill {
+  height: 100%;
+  border-radius: var(--p-border-radius-full);
+  transition: width var(--p-motion-duration-300) var(--p-motion-ease);
+}

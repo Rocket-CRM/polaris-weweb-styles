@@ -1,7 +1,7 @@
 {
   "name": "polaris-weweb-styles",
-  "version": "2.4.0",
-  "description": "SCSS design system + Vue 3 component library for WeWeb custom components following Shopify Polaris design language. Includes mixins, design tokens, theming support, and ready-to-use Vue components.",
+  "version": "2.5.0",
+  "description": "SCSS design system + Vue 3 component library for WeWeb custom components following Shopify Polaris design language. Includes mixins, design tokens, theming support, ready-to-use Vue components, and ECharts integration.",
   "main": "index.scss",
   "style": "index.scss",
   "sass": "index.scss",
@@ -9,7 +9,8 @@
   "exports": {
     ".": "./index.scss",
     "./components": "./components/index.js",
-    "./components/*": "./components/*.vue"
+    "./components/*": "./components/*.vue",
+    "./themes/*": "./themes/*.js"
   },
   "files": [
     "index.scss",
@@ -17,7 +18,9 @@
     "_tokens.scss",
     "_mixins.scss",
     "_condition-builder.scss",
+    "_chart-card.scss",
     "components",
+    "themes",
     "docs",
     "README.md",
     "LICENSE"
@@ -38,7 +41,9 @@
     "components",
     "shopify-polaris",
     "admin-ui",
-    "component-library"
+    "component-library",
+    "echarts",
+    "charts"
   ],
   "author": "rangwand",
   "license": "MIT",
@@ -52,6 +57,10 @@
   "homepage": "https://github.com/Rocket-CRM/polaris-weweb-styles#readme",
   "engines": {
     "node": ">=14.0.0"
+  },
+  "dependencies": {
+    "echarts": "^5.5.1",
+    "vue-echarts": "^7.0.3"
   },
   "peerDependencies": {
     "sass": ">=1.0.0",
