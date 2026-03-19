@@ -1,93 +1,234 @@
 // ============================================
 // POLARIS DESIGN TOKENS
-// Shopify Polaris Design System
+// Shopify Polaris Design System — V12 aligned
 // ============================================
 
 @mixin polaris-tokens {
   // ==================== COLORS ====================
-  
-  // Background Colors
+
+  // ---- Background Colors ----
   --p-color-bg: #f6f6f7;
+  --p-color-bg-inverse: #1a1a1a;
   --p-color-bg-surface: #ffffff;
-  --p-color-bg-surface-secondary: #f6f6f7;
   --p-color-bg-surface-hover: #f1f2f3;
   --p-color-bg-surface-active: #e7e8ea;
   --p-color-bg-surface-selected: #f2f7fe;
   --p-color-bg-surface-disabled: #fafafa;
-  
-  // Fill Colors
+  --p-color-bg-surface-secondary: #f6f6f7;
+  --p-color-bg-surface-secondary-hover: #f1f1f1;
+  --p-color-bg-surface-secondary-active: #ebebeb;
+  --p-color-bg-surface-secondary-selected: #ebebeb;
+  --p-color-bg-surface-tertiary: #f3f3f3;
+  --p-color-bg-surface-tertiary-hover: #ebebeb;
+  --p-color-bg-surface-tertiary-active: #e3e3e3;
+  --p-color-bg-surface-brand: #e3e3e3;
+  --p-color-bg-surface-brand-hover: #ebebeb;
+  --p-color-bg-surface-brand-active: #f1f1f1;
+  --p-color-bg-surface-brand-selected: #f1f1f1;
+  --p-color-bg-surface-info: #eaf4ff;
+  --p-color-bg-surface-info-hover: #e0f0ff;
+  --p-color-bg-surface-info-active: #cae6ff;
+  --p-color-bg-surface-success: #cdfed4;
+  --p-color-bg-surface-success-hover: #affebf;
+  --p-color-bg-surface-success-active: #92fcac;
+  --p-color-bg-surface-caution: #fff8db;
+  --p-color-bg-surface-caution-hover: #fff4bf;
+  --p-color-bg-surface-caution-active: #ffef9d;
+  --p-color-bg-surface-warning: #fff1e3;
+  --p-color-bg-surface-warning-hover: #ffebd5;
+  --p-color-bg-surface-warning-active: #ffe4c6;
+  --p-color-bg-surface-critical: #fee8eb;
+  --p-color-bg-surface-critical-hover: #fee1e6;
+  --p-color-bg-surface-critical-active: #fed9df;
+  --p-color-bg-surface-emphasis: #f0f2ff;
+  --p-color-bg-surface-emphasis-hover: #eaedff;
+  --p-color-bg-surface-emphasis-active: #e2e7ff;
+  --p-color-bg-surface-magic: #f8f7ff;
+  --p-color-bg-surface-magic-hover: #f3f1ff;
+  --p-color-bg-surface-magic-active: #e9e5ff;
+  --p-color-bg-surface-inverse: #303030;
+  --p-color-bg-surface-transparent: rgba(0, 0, 0, 0);
+
+  // ---- Fill Colors ----
   --p-color-bg-fill: #f1f1f1;
   --p-color-bg-fill-hover: #e3e3e3;
   --p-color-bg-fill-active: #d4d4d4;
+  --p-color-bg-fill-selected: #cccccc;
+  --p-color-bg-fill-disabled: #babec3;
+  --p-color-bg-fill-secondary: #f1f1f1;
+  --p-color-bg-fill-secondary-hover: #ebebeb;
+  --p-color-bg-fill-secondary-active: #e3e3e3;
+  --p-color-bg-fill-secondary-selected: #e3e3e3;
+  --p-color-bg-fill-tertiary: #e3e3e3;
+  --p-color-bg-fill-tertiary-hover: #d4d4d4;
+  --p-color-bg-fill-tertiary-active: #cccccc;
+  --p-color-bg-fill-transparent: rgba(0, 0, 0, 0.02);
   --p-color-bg-fill-transparent-hover: rgba(0, 0, 0, 0.05);
   --p-color-bg-fill-transparent-active: rgba(0, 0, 0, 0.08);
-  
-  // Brand Colors (Primary actions — driven by $brand-* SCSS variables)
+  --p-color-bg-fill-transparent-selected: rgba(0, 0, 0, 0.08);
+  --p-color-bg-fill-transparent-secondary: rgba(0, 0, 0, 0.06);
+  --p-color-bg-fill-transparent-secondary-hover: rgba(0, 0, 0, 0.08);
+  --p-color-bg-fill-transparent-secondary-active: rgba(0, 0, 0, 0.11);
+
+  // Brand fills (driven by SCSS variables)
   --p-color-bg-fill-brand: #{$brand-primary};
   --p-color-bg-fill-brand-hover: #{$brand-primary-hover};
   --p-color-bg-fill-brand-active: #{$brand-primary-active};
+  --p-color-bg-fill-brand-selected: #{$brand-primary};
   --p-color-bg-fill-brand-disabled: #{$brand-primary-disabled};
-  
-  // Status Colors
-  --p-color-bg-fill-critical: #d82c0d;
-  --p-color-bg-fill-critical-hover: #bc2200;
-  --p-color-bg-fill-critical-active: #a21b00;
-  --p-color-bg-fill-critical-secondary: #fee9e8;
-  --p-color-bg-fill-success: #29845A;
-  --p-color-bg-fill-success-secondary: #cdfee1;
+  --p-color-bg-fill-brand-secondary: rgba(2, 98, 224, 0.1);
+
+  // Status fills
+  --p-color-bg-fill-info: #91d0ff;
+  --p-color-bg-fill-info-hover: #51c0ff;
+  --p-color-bg-fill-info-active: #0094d5;
+  --p-color-bg-fill-info-secondary: #d5ebff;
+  --p-color-bg-fill-success: #047b5d;
+  --p-color-bg-fill-success-hover: #035e4c;
+  --p-color-bg-fill-success-active: #014b40;
+  --p-color-bg-fill-success-secondary: #affebf;
   --p-color-bg-fill-warning: #ffb800;
-  --p-color-bg-fill-warning-secondary: #FFF1E3;
-  --p-color-bg-fill-info: #0262E0;
-  --p-color-bg-fill-info-secondary: rgba(2, 98, 224, 0.1);
-  --p-color-bg-fill-caution: #FFF1E3;
+  --p-color-bg-fill-warning-hover: #e5a500;
+  --p-color-bg-fill-warning-active: #b28400;
+  --p-color-bg-fill-warning-secondary: #ffd6a4;
+  --p-color-bg-fill-caution: #ffe600;
+  --p-color-bg-fill-caution-hover: #ead300;
+  --p-color-bg-fill-caution-active: #e1cb00;
+  --p-color-bg-fill-caution-secondary: #ffeb78;
+  --p-color-bg-fill-critical: #c70a24;
+  --p-color-bg-fill-critical-hover: #a30a24;
+  --p-color-bg-fill-critical-active: #8e0b21;
+  --p-color-bg-fill-critical-selected: #8e0b21;
+  --p-color-bg-fill-critical-secondary: #fed1d7;
+  --p-color-bg-fill-emphasis: #005bd3;
+  --p-color-bg-fill-emphasis-hover: #004299;
+  --p-color-bg-fill-emphasis-active: #002e6a;
+  --p-color-bg-fill-magic: #8051ff;
+  --p-color-bg-fill-magic-secondary: #e9e5ff;
+  --p-color-bg-fill-magic-secondary-hover: #e4deff;
+  --p-color-bg-fill-magic-secondary-active: #dfd9ff;
+  --p-color-bg-fill-inverse: #303030;
+  --p-color-bg-fill-inverse-hover: #4a4a4a;
+  --p-color-bg-fill-inverse-active: #616161;
   --p-color-bg-fill-pending: #FEF3C7;
   --p-color-bg-fill-pending-secondary: #FFFBEB;
-  --p-color-bg-fill-disabled: #babec3;
-  --p-color-bg-fill-secondary: #f1f1f1;
-  
-  // Text Colors
+
+  // ---- Text Colors ----
   --p-color-text: #202223;
-  --p-color-text-subdued: #3F4142;
   --p-color-text-secondary: #6d7175;
   --p-color-text-disabled: #8c9196;
+  --p-color-text-subdued: #3F4142;
   --p-color-text-on-color: #ffffff;
+  --p-color-text-link: #{$link-color};
+  --p-color-text-link-hover: #004299;
+  --p-color-text-link-active: #002e6a;
   --p-color-text-brand: #{$link-color};
-  --p-color-text-critical: #d82c0d;
-  --p-color-text-success: #29845A;
-  --p-color-text-warning: #5E4200;
-  --p-color-text-info: #0262E0;
-  --p-color-text-caution: #5E4200;
+  --p-color-text-brand-hover: #303030;
+  --p-color-text-brand-on-bg-fill: #ffffff;
+  --p-color-text-brand-on-bg-fill-hover: #e3e3e3;
+  --p-color-text-brand-on-bg-fill-active: #cccccc;
+  --p-color-text-brand-on-bg-fill-disabled: #ffffff;
+  --p-color-text-info: #003a5a;
+  --p-color-text-info-hover: #003a5a;
+  --p-color-text-info-active: #002133;
+  --p-color-text-info-secondary: #007cb4;
+  --p-color-text-info-on-bg-fill: #002133;
+  --p-color-text-success: #014b40;
+  --p-color-text-success-hover: #073630;
+  --p-color-text-success-active: #022622;
+  --p-color-text-success-secondary: #047b5d;
+  --p-color-text-success-on-bg-fill: #fafffb;
+  --p-color-text-caution: #4f4700;
+  --p-color-text-caution-hover: #332e00;
+  --p-color-text-caution-active: #1f1c00;
+  --p-color-text-caution-secondary: #827500;
+  --p-color-text-caution-on-bg-fill: #332e00;
+  --p-color-text-warning: #5e4200;
+  --p-color-text-warning-hover: #412d00;
+  --p-color-text-warning-active: #251a00;
+  --p-color-text-warning-secondary: #956f00;
+  --p-color-text-warning-on-bg-fill: #251a00;
+  --p-color-text-critical: #8e0b21;
+  --p-color-text-critical-hover: #5f0716;
+  --p-color-text-critical-active: #2f040b;
+  --p-color-text-critical-secondary: #c70a24;
+  --p-color-text-critical-on-bg-fill: #fffafb;
+  --p-color-text-emphasis: #005bd3;
+  --p-color-text-emphasis-hover: #004299;
+  --p-color-text-emphasis-active: #002e6a;
+  --p-color-text-emphasis-on-bg-fill: #fcfdff;
+  --p-color-text-emphasis-on-bg-fill-hover: #e2e7ff;
+  --p-color-text-emphasis-on-bg-fill-active: #d5dcff;
+  --p-color-text-magic: #5700d1;
+  --p-color-text-magic-secondary: #7126ff;
+  --p-color-text-magic-on-bg-fill: #fdfdff;
+  --p-color-text-inverse: #e3e3e3;
+  --p-color-text-inverse-secondary: #b5b5b5;
+  --p-color-text-link-inverse: #c5d0ff;
   --p-color-text-pending: #D97706;
-  
-  // Border Colors
+
+  // ---- Border Colors ----
   --p-color-border: #EBEDEF;
   --p-color-border-hover: #C9CCCF;
   --p-color-border-disabled: #d9dbdd;
-  --p-color-border-brand: #{$brand-primary};
-  --p-color-border-critical: #d82c0d;
-  --p-color-border-success: #29845A;
-  --p-color-border-warning: #ffb800;
-  --p-color-border-info: #0262E0;
+  --p-color-border-secondary: #ebebeb;
+  --p-color-border-tertiary: #cccccc;
   --p-color-border-focus: #{$link-color};
+  --p-color-border-brand: #{$brand-primary};
+  --p-color-border-info: #a8d8ff;
+  --p-color-border-success: #92fcac;
+  --p-color-border-caution: #ffeb78;
+  --p-color-border-warning: #ffc879;
+  --p-color-border-critical: #fec1c7;
+  --p-color-border-critical-secondary: #8e0b21;
+  --p-color-border-emphasis: #005bd3;
+  --p-color-border-emphasis-hover: #004299;
+  --p-color-border-emphasis-active: #002e6a;
+  --p-color-border-magic: #e4deff;
+  --p-color-border-magic-secondary: #9474ff;
+  --p-color-border-magic-secondary-hover: #8051ff;
+  --p-color-border-inverse: #616161;
+  --p-color-border-inverse-hover: #cccccc;
+  --p-color-border-inverse-active: #e3e3e3;
   --p-color-border-pending: #D97706;
-  
-  // Icon Colors
+
+  // ---- Icon Colors ----
   --p-color-icon: #5c5f62;
   --p-color-icon-hover: #1a1c1d;
-  --p-color-icon-secondary: #8c9196;
+  --p-color-icon-active: #1a1a1a;
   --p-color-icon-disabled: #babfc4;
-  --p-color-icon-critical: #d82c0d;
-  --p-color-icon-success: #29845A;
-  --p-color-icon-warning: #ffb800;
-  --p-color-icon-info: #0262E0;
+  --p-color-icon-secondary: #8c9196;
+  --p-color-icon-secondary-hover: #616161;
+  --p-color-icon-secondary-active: #4a4a4a;
+  --p-color-icon-brand: #1a1a1a;
+  --p-color-icon-info: #0094d5;
+  --p-color-icon-success: #047b5d;
+  --p-color-icon-caution: #998a00;
+  --p-color-icon-warning: #b28400;
+  --p-color-icon-critical: #e22c38;
+  --p-color-icon-emphasis: #005bd3;
+  --p-color-icon-emphasis-hover: #004299;
+  --p-color-icon-emphasis-active: #002e6a;
+  --p-color-icon-magic: #8051ff;
+  --p-color-icon-inverse: #e3e3e3;
   --p-color-icon-pending: #D97706;
-  
-  // Focus
+
+  // ---- Focus ----
   --p-color-focus-ring: #{$link-color};
-  
+
+  // ---- Input & Form Colors ----
+  --p-color-input-bg-surface: #ffffff;
+  --p-color-input-bg-surface-hover: #fafafa;
+  --p-color-input-bg-surface-active: #f7f7f7;
+  --p-color-input-border: #8c9196;
+  --p-color-input-border-hover: #6d7175;
+  --p-color-input-border-active: #{$link-color};
+
+  // ---- Backdrop ----
+  --p-color-backdrop-bg: rgba(0, 0, 0, 0.71);
+
   // ==================== SPACING ====================
-  // 4px base unit
-  
+
   --p-space-0: 0;
   --p-space-025: 1px;
   --p-space-050: 2px;
@@ -101,38 +242,59 @@
   --p-space-800: 32px;
   --p-space-1000: 40px;
   --p-space-1200: 48px;
-  
+  --p-space-1600: 64px;
+  --p-space-2000: 80px;
+  --p-space-2400: 96px;
+  --p-space-2800: 112px;
+  --p-space-3200: 128px;
+
+  // Semantic spacing aliases
+  --p-space-button-group-gap: var(--p-space-200);
+  --p-space-card-gap: var(--p-space-400);
+  --p-space-card-padding: var(--p-space-400);
+  --p-space-table-cell-padding: var(--p-space-150);
+
   // ==================== TYPOGRAPHY ====================
-  
-  // Font Family
+
   --p-font-family-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'San Francisco', 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
   --p-font-family-mono: ui-monospace, SFMono-Regular, 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace;
-  
-  // Font Sizes
+
   --p-font-size-275: 11px;
   --p-font-size-300: 12px;
   --p-font-size-325: 13px;
   --p-font-size-350: 14px;
   --p-font-size-400: 16px;
+  --p-font-size-450: 18px;
   --p-font-size-500: 20px;
+  --p-font-size-550: 22px;
   --p-font-size-600: 24px;
   --p-font-size-700: 28px;
-  
-  // Line Heights
-  --p-font-line-height-300: 16px;
-  --p-font-line-height-400: 20px;
-  --p-font-line-height-500: 24px;
-  --p-font-line-height-600: 28px;
-  --p-font-line-height-700: 32px;
-  
-  // Font Weights
+  --p-font-size-750: 30px;
+  --p-font-size-800: 32px;
+  --p-font-size-900: 36px;
+  --p-font-size-1000: 40px;
+
+  --p-font-line-height-300: 12px;
+  --p-font-line-height-400: 16px;
+  --p-font-line-height-500: 20px;
+  --p-font-line-height-600: 24px;
+  --p-font-line-height-700: 28px;
+  --p-font-line-height-800: 32px;
+  --p-font-line-height-1000: 40px;
+  --p-font-line-height-1200: 48px;
+
   --p-font-weight-regular: 400;
   --p-font-weight-medium: 500;
   --p-font-weight-semibold: 600;
   --p-font-weight-bold: 700;
-  
+
+  --p-font-letter-spacing-densest: -0.54px;
+  --p-font-letter-spacing-denser: -0.3px;
+  --p-font-letter-spacing-dense: -0.2px;
+  --p-font-letter-spacing-normal: 0px;
+
   // ==================== BORDER RADIUS ====================
-  
+
   --p-border-radius-0: 0;
   --p-border-radius-050: 2px;
   --p-border-radius-100: 4px;
@@ -140,44 +302,81 @@
   --p-border-radius-200: 8px;
   --p-border-radius-300: 12px;
   --p-border-radius-400: 16px;
+  --p-border-radius-500: 20px;
+  --p-border-radius-750: 30px;
   --p-border-radius-full: 9999px;
-  
-  // ==================== SHADOWS ====================
-  
-  --p-shadow-0: none;
-  --p-shadow-100: 0 1px 0 rgba(0, 0, 0, 0.05);
-  --p-shadow-200: 0 3px 1px -1px rgba(0, 0, 0, 0.07);
-  --p-shadow-header: 0 1px 0 0 rgba(0, 0, 0, 0.04);
-  --p-shadow-card: 0px 4px 4px 0px rgba(0, 0, 0, 0.03);
-  --p-shadow-card-hover: 0px 4px 8px 0px rgba(0, 0, 0, 0.06), 0 0 0 1px rgba(0, 0, 0, 0.04);
-  --p-shadow-button: 0 1px 0 rgba(0, 0, 0, 0.05);
-  --p-shadow-button-hover: 0 2px 0 rgba(0, 0, 0, 0.08);
-  --p-shadow-button-primary: 0px 1px 0px 0px rgba(26, 26, 26, 0.07), inset 0px 1px 0px 0px rgba(204, 204, 204, 0.5), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.17), inset -1px 0px 0px 0px rgba(0, 0, 0, 0.13), inset 1px 0px 0px 0px rgba(0, 0, 0, 0.13);
-  --p-shadow-inset-100: inset 0 1px 1px rgba(0, 0, 0, 0.1);
-  --p-shadow-popover: 0px 4px 4px 0px rgba(0, 0, 0, 0.07);
-  --p-shadow-toast: 0 4px 16px rgba(0, 0, 0, 0.16);
-  
+
   // ==================== BORDER WIDTH ====================
-  
+
+  --p-border-width-0: 0;
+  --p-border-width-0165: 0.66px;
   --p-border-width-025: 1px;
   --p-border-width-050: 2px;
-  
+  --p-border-width-100: 4px;
+
+  // ==================== SHADOWS ====================
+
+  --p-shadow-0: none;
+  --p-shadow-100: 0px 1px 0px 0px rgba(26, 26, 26, 0.07);
+  --p-shadow-200: 0px 3px 1px -1px rgba(26, 26, 26, 0.07);
+  --p-shadow-300: 0px 4px 6px -2px rgba(26, 26, 26, 0.20);
+  --p-shadow-400: 0px 8px 16px -4px rgba(26, 26, 26, 0.22);
+  --p-shadow-500: 0px 12px 20px -8px rgba(26, 26, 26, 0.24);
+  --p-shadow-600: 0px 20px 20px -8px rgba(26, 26, 26, 0.28);
+  --p-shadow-bevel-100: 1px 0px 0px 0px rgba(0, 0, 0, 0.13) inset, -1px 0px 0px 0px rgba(0, 0, 0, 0.13) inset, 0px -1px 0px 0px rgba(0, 0, 0, 0.17) inset, 0px 1px 0px 0px rgba(204, 204, 204, 0.5) inset;
+  --p-shadow-inset-100: 0px 1px 2px 0px rgba(26, 26, 26, 0.15) inset, 0px 1px 1px 0px rgba(26, 26, 26, 0.15) inset;
+  --p-shadow-inset-200: 0px 2px 1px 0px rgba(26, 26, 26, 0.20) inset, 1px 0px 1px 0px rgba(26, 26, 26, 0.12) inset, -1px 0px 1px 0px rgba(26, 26, 26, 0.12) inset;
+  --p-shadow-header: 0 1px 0 0 rgba(0, 0, 0, 0.04);
+  --p-shadow-card: 0px 4px 4px 0px rgba(0, 0, 0, 0.03);
+  --p-shadow-card-sm: 0px 4px 4px 0px rgba(0, 0, 0, 0.03);
+  --p-shadow-card-hover: 0px 4px 8px 0px rgba(0, 0, 0, 0.06), 0 0 0 1px rgba(0, 0, 0, 0.04);
+  --p-shadow-button: 0px -1px 0px 0px #b5b5b5 inset, 0px 0px 0px 1px rgba(0, 0, 0, 0.1) inset, 0px 0.5px 0px 1.5px #FFF inset;
+  --p-shadow-button-hover: 0px 1px 0px 0px #EBEBEB inset, -1px 0px 0px 0px #EBEBEB inset, 1px 0px 0px 0px #EBEBEB inset, 0px -1px 0px 0px #CCC inset;
+  --p-shadow-button-inset: -1px 0px 1px 0px rgba(26, 26, 26, 0.122) inset, 1px 0px 1px 0px rgba(26, 26, 26, 0.122) inset, 0px 2px 1px 0px rgba(26, 26, 26, 0.2) inset;
+  --p-shadow-button-primary: 0px -1px 0px 1px rgba(0, 0, 0, 0.8) inset, 0px 0px 0px 1px rgba(48, 48, 48, 1) inset, 0px 0.5px 0px 1.5px rgba(255, 255, 255, 0.25) inset;
+  --p-shadow-button-primary-hover: 0px 1px 0px 0px rgba(255, 255, 255, 0.24) inset, 1px 0px 0px 0px rgba(255, 255, 255, 0.20) inset, -1px 0px 0px 0px rgba(255, 255, 255, 0.20) inset, 0px -1px 0px 0px #000 inset, 0px -1px 0px 1px #1A1A1A;
+  --p-shadow-button-primary-inset: 0px 3px 0px 0px rgb(0, 0, 0) inset;
+  --p-shadow-button-primary-critical: 0px -1px 0px 1px rgba(142, 31, 11, 0.8) inset, 0px 0px 0px 1px rgba(181, 38, 11, 0.8) inset, 0px 0.5px 0px 1.5px rgba(255, 255, 255, 0.349) inset;
+  --p-shadow-button-primary-critical-hover: 0px 1px 0px 0px rgba(255, 255, 255, 0.48) inset, 1px 0px 0px 0px rgba(255, 255, 255, 0.20) inset, -1px 0px 0px 0px rgba(255, 255, 255, 0.20) inset, 0px -1.5px 0px 0px rgba(0, 0, 0, 0.25) inset;
+  --p-shadow-button-primary-critical-inset: -1px 0px 1px 0px rgba(0, 0, 0, 0.2) inset, 1px 0px 1px 0px rgba(0, 0, 0, 0.2) inset, 0px 2px 0px 0px rgba(0, 0, 0, 0.6) inset;
+  --p-shadow-button-primary-success: 0px -1px 0px 1px rgba(12, 81, 50, 0.8) inset, 0px 0px 0px 1px rgba(19, 111, 69, 0.8) inset, 0px 0.5px 0px 1.5px rgba(255, 255, 255, 0.251) inset;
+  --p-shadow-button-primary-success-hover: 0px 1px 0px 0px rgba(255, 255, 255, 0.48) inset, 1px 0px 0px 0px rgba(255, 255, 255, 0.20) inset, -1px 0px 0px 0px rgba(255, 255, 255, 0.20) inset, 0px -1.5px 0px 0px rgba(0, 0, 0, 0.25) inset;
+  --p-shadow-button-primary-success-inset: -1px 0px 1px 0px rgba(0, 0, 0, 0.2) inset, 1px 0px 1px 0px rgba(0, 0, 0, 0.2) inset, 0px 2px 0px 0px rgba(0, 0, 0, 0.6) inset;
+  --p-shadow-border-inset: 0px 0px 0px 1px rgba(0, 0, 0, 0.08) inset;
+  --p-shadow-popover: 0px 4px 4px 0px rgba(0, 0, 0, 0.07);
+  --p-shadow-toast: 0 4px 16px rgba(0, 0, 0, 0.16);
+
   // ==================== MOTION ====================
-  
+
   --p-motion-duration-0: 0ms;
   --p-motion-duration-50: 50ms;
   --p-motion-duration-100: 100ms;
   --p-motion-duration-150: 150ms;
   --p-motion-duration-200: 200ms;
+  --p-motion-duration-250: 250ms;
   --p-motion-duration-300: 300ms;
+  --p-motion-duration-350: 350ms;
+  --p-motion-duration-400: 400ms;
+  --p-motion-duration-500: 500ms;
   --p-motion-ease: cubic-bezier(0.25, 0.1, 0.25, 1);
   --p-motion-ease-in: cubic-bezier(0.42, 0, 1, 1);
   --p-motion-ease-out: cubic-bezier(0, 0, 0.58, 1);
+  --p-motion-ease-in-out: cubic-bezier(0.42, 0, 0.58, 1);
 
-  // ==================== ADDITIONAL TOKENS ====================
+  // ==================== Z-INDEX ====================
 
-  --p-color-bg-fill-brand-secondary: rgba(2, 98, 224, 0.1);
-  --p-shadow-card-sm: 0px 4px 4px 0px rgba(0, 0, 0, 0.03);
+  --p-z-index-1: 100;
+  --p-z-index-2: 400;
+  --p-z-index-3: 510;
+  --p-z-index-4: 512;
+  --p-z-index-5: 513;
+  --p-z-index-6: 515;
+  --p-z-index-7: 516;
+  --p-z-index-8: 518;
+  --p-z-index-9: 519;
+  --p-z-index-10: 520;
+  --p-z-index-11: 525;
+  --p-z-index-12: 530;
 
   // Native form element brand color
   input[type="radio"],
