@@ -1,0 +1,156 @@
+// ============================================
+// CONDITION BUILDER PATTERNS
+// Shared mixins for condition/filter UIs across all components.
+// Used by: workflow-builder ConditionConfig, agent-builder ConditionBuilder,
+//          audience-builder ConditionGroupCard
+// Reference: earn-studio EarnConditionGroupConfig (the gold standard)
+// ============================================
+
+// ── Group Card ──────────────────────────────────────────────────
+// A bordered card containing a condition group with header + body.
+// Use instead of PolarisCard subdued for cleaner visual separation.
+
+@mixin condition-group-card {
+  border: 1px solid var(--p-color-border);
+  border-radius: var(--p-border-radius-300);
+  background: var(--p-color-bg-surface);
+  overflow: hidden;
+}
+
+@mixin condition-group-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--p-space-200) var(--p-space-300);
+  background: var(--p-color-bg-surface);
+  border-bottom: 1px solid var(--p-color-border);
+}
+
+@mixin condition-group-header-title {
+  font-weight: var(--p-font-weight-semibold);
+  font-size: var(--p-font-size-325);
+  color: var(--p-color-text);
+}
+
+@mixin condition-group-body {
+  padding: var(--p-space-400);
+  display: flex;
+  flex-direction: column;
+  gap: var(--p-space-400);
+}
+
+// ── Condition Fields Row ────────────────────────────────────────
+// Inline row of field/operator/value selects with normalized heights.
+// Each field stretches to fill available width.
+
+@mixin condition-fields-row {
+  display: flex;
+  gap: var(--p-space-200);
+  align-items: flex-end;
+  width: 100%;
+
+  > * { min-width: 0; }
+
+  select,
+  input:not([type="checkbox"]):not([type="radio"]) {
+    height: 36px;
+    box-sizing: border-box;
+  }
+}
+
+@mixin condition-field-grow {
+  flex: 1;
+  min-width: 0;
+}
+
+@mixin condition-field-operator {
+  width: 160px;
+  flex-shrink: 0;
+}
+
+// ── Row Connector (between conditions within a group) ───────────
+// Simple AND/OR label between condition rows.
+
+@mixin condition-row-connector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--p-space-100) 0;
+}
+
+@mixin condition-connector-label {
+  font-size: var(--p-font-size-300);
+  font-weight: var(--p-font-weight-semibold);
+  color: var(--p-color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+// ── Group Connector (between groups) ────────────────────────────
+// Horizontal line with AND badge between condition groups.
+
+@mixin condition-group-connector {
+  display: flex;
+  align-items: center;
+  gap: var(--p-space-200);
+  padding: var(--p-space-200) 0;
+}
+
+@mixin condition-group-connector-line {
+  flex: 1;
+  height: 1px;
+  background: var(--p-color-border);
+}
+
+@mixin condition-group-connector-badge {
+  font-size: var(--p-font-size-300);
+  font-weight: var(--p-font-weight-semibold);
+  color: var(--p-color-text-secondary);
+  background: var(--p-color-bg-surface);
+  padding: var(--p-space-100) var(--p-space-300);
+  border-radius: var(--p-border-radius-full);
+  border: 1px solid var(--p-color-border);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+// ── Container ───────────────────────────────────────────────────
+// Wrapper for the whole condition builder area.
+
+@mixin condition-builder-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--p-space-300);
+}
+
+@mixin condition-add-group-btn {
+  @include polaris-button-outline;
+  width: 100%;
+  justify-content: center;
+}
+
+// ── Condition Entry (earn-studio style) ─────────────────────────
+// A bordered condition card with header + body, used in sidebars.
+
+@mixin condition-entry {
+  border: 1px solid var(--p-color-border);
+  border-radius: var(--p-border-radius-200);
+  overflow: hidden;
+}
+
+@mixin condition-entry-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--p-space-200) var(--p-space-300);
+  background: var(--p-color-bg-surface-secondary);
+  border-bottom: 1px solid var(--p-color-border);
+}
+
+@mixin condition-entry-body {
+  padding: var(--p-space-300);
+  display: flex;
+  flex-direction: column;
+  gap: var(--p-space-400);
+}
