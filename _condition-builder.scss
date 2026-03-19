@@ -22,7 +22,7 @@
   align-items: center;
   justify-content: space-between;
   padding: var(--p-space-200) var(--p-space-300);
-  background: var(--p-color-bg-surface);
+  background: var(--p-color-bg-surface-secondary);
   border-bottom: 1px solid var(--p-color-border);
 }
 
@@ -153,4 +153,24 @@
   display: flex;
   flex-direction: column;
   gap: var(--p-space-400);
+}
+
+// ── Section Action Bar ──────────────────────────────────────────
+// Right-aligned button row for section headers (title + actions).
+// Used for "Outcomes (2) [Add Outcome]" style headers.
+
+@mixin section-action-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--p-space-300);
+  width: 100%;
+}
+
+@mixin section-action-bar-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--p-space-200);
+  margin-left: auto;
+  flex-shrink: 0;
 }
