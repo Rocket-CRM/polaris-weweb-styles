@@ -8,7 +8,6 @@
 
 // ── Group Card ──────────────────────────────────────────────────
 // A bordered card containing a condition group with header + body.
-// Use instead of PolarisCard subdued for cleaner visual separation.
 
 @mixin condition-group-card {
   border: 1px solid var(--p-color-border);
@@ -18,6 +17,16 @@
 }
 
 @mixin condition-group-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--p-space-200) var(--p-space-300);
+  background: var(--p-color-bg-surface);
+  border-bottom: 1px solid var(--p-color-border);
+}
+
+// Use when group sits on a white card — gives visual separation.
+@mixin condition-group-header-subdued {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -40,8 +49,6 @@
 }
 
 // ── Condition Fields Row ────────────────────────────────────────
-// Inline row of field/operator/value selects with normalized heights.
-// Each field stretches to fill available width.
 
 @mixin condition-fields-row {
   display: flex;
@@ -69,7 +76,6 @@
 }
 
 // ── Row Connector (between conditions within a group) ───────────
-// Simple AND/OR label between condition rows.
 
 @mixin condition-row-connector {
   display: flex;
@@ -87,7 +93,6 @@
 }
 
 // ── Group Connector (between groups) ────────────────────────────
-// Horizontal line with AND badge between condition groups.
 
 @mixin condition-group-connector {
   display: flex;
@@ -116,7 +121,6 @@
 }
 
 // ── Container ───────────────────────────────────────────────────
-// Wrapper for the whole condition builder area.
 
 @mixin condition-builder-container {
   display: flex;
@@ -131,7 +135,6 @@
 }
 
 // ── Condition Entry (earn-studio style) ─────────────────────────
-// A bordered condition card with header + body, used in sidebars.
 
 @mixin condition-entry {
   border: 1px solid var(--p-color-border);
@@ -153,24 +156,4 @@
   display: flex;
   flex-direction: column;
   gap: var(--p-space-400);
-}
-
-// ── Section Action Bar ──────────────────────────────────────────
-// Right-aligned button row for section headers (title + actions).
-// Used for "Outcomes (2) [Add Outcome]" style headers.
-
-@mixin section-action-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--p-space-300);
-  width: 100%;
-}
-
-@mixin section-action-bar-actions {
-  display: flex;
-  align-items: center;
-  gap: var(--p-space-200);
-  margin-left: auto;
-  flex-shrink: 0;
 }
